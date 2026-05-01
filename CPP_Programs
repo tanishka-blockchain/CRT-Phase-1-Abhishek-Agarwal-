@@ -1,4 +1,4 @@
-//Program no.1 ececuting if statement 
+//Program no.1 executing if statement 
 #include <iostream>
 using namespace std;
 
@@ -12,7 +12,7 @@ int main() {
     return 0;
 }
 
-//Program no.2 ececuting if-else statement 
+//Program no.2 executing if-else statement 
 #include <iostream>
 using namespace std;
 
