@@ -1,0 +1,104 @@
+// Problem 1 --
+// Print number 1 to 5 , 5 times 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    for(int i = 1; i <= 5; i++) {
+        for(int j = 1; j <= 5; j++) {
+            cout << j;
+        }
+        cout << "\n";
+    }
+}
+
+// Problem 2 --
+// Print Solid Square 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    for(int i = 1; i <= 5; i++) {
+        for(int j = 1; j <= 5; j++) {
+            cout << "*";
+        }
+        cout << "\n";
+    }
+}
+
+// Problem 3 --
+// Print Solid Rectangle
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int row, col;
+    cin >> row;
+    cin >> col;
+    
+    for(int i = 1; i <= row; i++) {
+        for(int j = 1; j <= col; j++) {
+            cout << "*";
+        }
+        cout << "\n";
+    }
+}
+
+// Problem 4 --
+// Print a right angled triangle
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    for(int i = 1; i <= 5; i++) {
+        for(int j = 1; j <= i; j++) {
+            cout << "*";
+        }
+        cout << "\n";
+    }
+}
+
+// Problem 5 --
+// Print a hollow Square
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    for(int i = 1; i <= 5; i++) {
+        for(int j = 1; j <= 5; j++) {
+            cout << " ";
+            if (i == 1 || i == 5 || j == 1 || j == 5){
+            cout << "*";
+            } else {
+                cout <<" ";
+            }
+        }    
+          cout << "\n";
+    }
+}
+
+// Problem 6 --
+// Print mirror of Right angle triangle 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    for(int i = 1; i <= 5; i++) {
+        for(int j = 5 - i; j >= 1; j--) {
+            cout << " ";
+        }
+        for(int k = 1; k <= i; k++){
+            cout << "*";
+            }
+            cout << "\n";
+    }
+}
+
