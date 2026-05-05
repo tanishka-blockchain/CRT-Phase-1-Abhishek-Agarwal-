@@ -1,104 +1,161 @@
-// Problem 1 --
-// Print number 1 to 5 , 5 times 
-
-#include <iostream>
-using namespace std;
-
-int main() {
+//   PROBLEM 01: REPEATING NUMBER ROW 🔢
+//   Task: Print numbers 1-5 in 5 consecutive rows
+//   Pattern:
+//  12345
+//  12345
+//  12345
     
-    for(int i = 1; i <= 5; i++) {
-        for(int j = 1; j <= 5; j++) {
-            cout << j;
-        }
-        cout << "\n";
-    }
-}
+ #include <iostream>
+ using namespace std;
 
-// Problem 2 --
-// Print Solid Square 
+ int main() {
+     for(int i = 1; i <= 5; i++) {
+         for(int j = 1; j <= 5; j++) {
+             cout << j;
+         }
+         cout <<"\n";
+     }
+ }
 
-#include <iostream>
-using namespace std;
 
-int main() {
+//   PROBLEM 02: SOLID SQUARE ⏹️
+//   Task: Create a 5x5 star grid
+//   Pattern:
+//  * * * * *
+//  * * * * *
+//  * * * * *
+
+
+ #include <iostream>
+ using namespace std;
+
+ int main() {
+     for(int i = 1; i <= 5; i++) {
+         for(int j = 1; j <= 5; j++) {
+             cout << " *";
+         }
+         cout <<"\n";
+     }
+ }
+
+
+//   PROBLEM 03: DYNAMIC RECTANGLE 🧱
+//  Task: User-defined rows and columns
+//   Pattern (3x5):
+//  * * * * *
+//  * * * * *
+//  * * * * *
+
+
+ #include <iostream>
+ using namespace std;
+
+ int main() {
+     int row, col;
+     cin >> row >> col;
     
-    for(int i = 1; i <= 5; i++) {
-        for(int j = 1; j <= 5; j++) {
-            cout << "*";
+     for(int i = 1; i <= row; i++) {
+         for(int j = 1; j <= col; j++) {
+             cout << " *";
+         }
+         cout << "\n";
+     }
+ }
+
+
+//   PROBLEM 04: RIGHT ANGLED TRIANGLE 📐
+//   Task: Grow stars per row index
+//   Pattern:
+// *
+// **
+// ***
+// ****
+
+
+ #include <iostream>
+ using namespace std;
+
+ int main() {
+     for(int i = 1; i <= 5; i++) {
+         for(int j = 1; j <= i; j++) {
+             cout << "*";
         }
-        cout << "\n";
-    }
-}
+         cout <<"\n";
+     }
+ }
 
-// Problem 3 --
-// Print Solid Rectangle
+//   PROBLEM 05: HOLLOW SQUARE 🔲
+//   Task: Border stars with empty center
+//   Pattern:
+//  *****
+//  *   *
+//  *   *
+//  *****
 
-#include <iostream>
-using namespace std;
+ #include <iostream>
+ using namespace std;
 
-int main() {
-    int row, col;
-    cin >> row;
-    cin >> col;
-    
-    for(int i = 1; i <= row; i++) {
-        for(int j = 1; j <= col; j++) {
-            cout << "*";
-        }
-        cout << "\n";
-    }
-}
-
-// Problem 4 --
-// Print a right angled triangle
-
-#include <iostream>
-using namespace std;
-
-int main() {
-    for(int i = 1; i <= 5; i++) {
-        for(int j = 1; j <= i; j++) {
-            cout << "*";
-        }
-        cout << "\n";
-    }
-}
-
-// Problem 5 --
-// Print a hollow Square
-
-#include <iostream>
-using namespace std;
-
-int main() {
-    for(int i = 1; i <= 5; i++) {
-        for(int j = 1; j <= 5; j++) {
-            cout << " ";
-            if (i == 1 || i == 5 || j == 1 || j == 5){
-            cout << "*";
-            } else {
-                cout <<" ";
+ int main() {
+     for(int i = 1; i <= 5; i++) {
+         for(int j = 1; j <= 5; j++) {
+             cout << " ";
+             if(i == 1 || i == 5 || j == 1 || j == 5){
+                cout <<"*";
+             } else {
+                 cout << " ";
             }
-        }    
-          cout << "\n";
-    }
-}
+         }
+         cout << "\n";
+     }
+ }
 
-// Problem 6 --
-// Print mirror of Right angle triangle 
+
+//   PROBLEM 06: MIRROR TRIANGLE 🪞
+//   Task: Right-aligned growing triangle
+//   Pattern:
+//     *
+//    **
+//   ***
+//  ****
+
 
 #include <iostream>
 using namespace std;
 
 int main() {
     for(int i = 1; i <= 5; i++) {
+        // Space logic for right alignment
         for(int j = 5 - i; j >= 1; j--) {
             cout << " ";
-        }
+        } 
         for(int k = 1; k <= i; k++){
             cout << "*";
-            }
-            cout << "\n";
+        }
+        cout << "\n";
     }
 }
 
+
+//   PROBLEM 07: PYRAMID PATTERN 🔺
+//   Task: Symmetric star pyramid
+//   Pattern:
+//     *
+//    * *
+//   * * *
+//  * * * *
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    for(int i = 1; i <= 5; i++) {
+        // Center alignment spaces
+        for(int j = 5 - i; j >= 1; j--) {
+            cout << " ";
+        } 
+        for(int k = 1; k <= i; k++){
+            cout << " *";
+        }
+        cout << "\n";
+    }
+}
