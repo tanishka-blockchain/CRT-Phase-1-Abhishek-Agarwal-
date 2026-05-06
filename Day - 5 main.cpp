@@ -1,75 +1,71 @@
-//program-1
-//pattern printing 
-#include <iostream>
-using namespace std;
+//   PROBLEM 01: DIAMOND HALF-PATTERN 🔼🔽
+//   Task: Combine upper and lower triangles
+//   Pattern:
+// *
+// **
+// ***
+// **
+// *
 
-int main () {
-    //upper triangle
-    for (int i = 1; i <= 5; i++) {
-        for (int j = 1; j <= i; j++) {
-            cout << "*";
-        }
-        cout<<"\n";
-    } 
-    //lower triangle
-    for (int i = 5 - 1; i >= 1; i--) {
-        for (int j = 1; j <= i; j++) {
-            cout <<"*";
-        }
-        cout <<"\n";
-    }
-}
+ #include <iostream>
+ using namespace std;
 
-
-
-//program-2
-// addition of 2 no. 
-#include <iostream>
-using namespace std;
-
-int main () {
-    int a = 10;
-    int b = 5;
-    int c = a + b;
-    cout << c;
-}
+ int main() {
+     // Upper triangle 
+     for(int i = 1; i <= 5; i++) {
+         for(int j = 1;  j<= i; j++) {
+             cout << "*";
+         }
+         cout <<"\n";
+     }
+    
+     // Lower triangle
+     for(int i = 5 - 1;  i >= 1; i--) {
+         for(int j = 1; j <= i; j++) {
+             cout <<"*";
+         }
+         cout <<"\n";
+     }
+ }
 
 
-//program-3
-// function making practice 
-#include <iostream>
-using namespace std;
+//   PROBLEM 02: BASIC FUNCTION VOID 📢
+//   Task: Define and call a simple message function
 
-void printmessage(){
-    cout << "hi we are learning functions";
-}
-int main (){
-    // functin calling 
-    printmessage();
-    return 0;
-}
+ #include <iostream>
+ using namespace std;
 
+ void printMessage(){
+     cout << "Hi we are learning Functions....";
+ }
 
-//program-3
-// function with some values and some return value
-#include <iostream>
-using namespace std;
-int calculatearea(int length, int width) {
-    return length * width;
-}
-
-int main () {
-    int a = 10;
-    int b = 5;
-    int area = calculatearea(a, b);
-    cout << area;
-}
+ int main() {
+     printMessage();
+     return 0; 
+ }
 
 
+//   PROBLEM 03: AREA CALCULATOR 📐
+//   Task: Function with parameters and return value
 
-//program-4
-//types of function
-//program 4.1 -- no argument ,no return values 
+ #include <iostream>
+ using namespace std;
+
+ int calculateArea(int length, int width){
+     return length * width;
+ }
+
+ int main() {
+     int a = 12;
+     int b = 10;
+     int area = calculateArea(a, b);
+     cout << area;
+ }
+
+
+//   PROBLEM 04: THE FOUR TYPES OF FUNCTIONS 🛠️
+
+//  Program 4.1 -- no argument ,no return values 
 
 #include <iostream>
 using namespace std;
@@ -82,9 +78,7 @@ int main(){
     bellRing();
 }
 
-
-
-//program 4.2 --  argument ,no return values 
+// Program 4.2 --  argument ,no return values 
 
 #include <iostream>
 using namespace std;
@@ -97,9 +91,7 @@ void sendmessage(string message){
      sendmessage("BJP wons");
  }
 
-
-
-//program 4.3 --  no argument , return values 
+// Program 4.3 --  no argument , return values 
 
 #include <iostream>
 using namespace std;
@@ -112,9 +104,7 @@ int ticketnumber(){
      cout << ticketnumber();
  }
 
-
-
-//program 4.4 -- argument , return values 
+// Program 4.4 -- argument , return values 
 
 #include <iostream>
 using namespace std;
@@ -128,27 +118,39 @@ int main(){
 }
 
 
-
-//program 5 
-//function overloading 
+//   PROBLEM 05: FUNCTION OVERLOADING 🏗️
+//   Task: Use the same name 'add' for different types/counts
 
 #include <iostream>
 using namespace std;
 
+// Adding two integers
 int add(int a, int b){
     return a + b;
 }
 
-int add(int a, int b,int c){
+// Adding two doubles
+double add(double a, double b){
+    return a + b;
+}
+
+// Adding three integers
+int add(int a, int b, int c){
     return a + b + c;
 }
 
-float add(float a, float b, float c,float d){
+// Adding four floats
+float add(float a, float b, float c, float d){
     return a + b + c + d;
 }
 
-int main(){
-    cout << add(5,2) << "\n";
-    cout << add(5,2,3)<<"\n";
-    cout << add(5.0,2.3,5.5,7.9);
+int main() {
+    cout << "Int Add (2): " << add(5, 2) << "\n";
+    cout << "Double Add:   " << add(5.5, 7.9) <<"\n";
+    cout << "Int Add (3): " << add(5, 2, 3) << "\n";
+    cout << "Float Add(4): " << add(5.0f, 2.3f, 5.5f, 7.9f) <<"\n";
+    
+    return 0;
 }
+
+
