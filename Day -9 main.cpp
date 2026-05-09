@@ -67,27 +67,30 @@ int main() {
     }
 }    
     
-// Problem 3 --
-// Sum of an array
+// Problem -- 3
+// Print data of an array
 
 #include <iostream>
 using namespace std;
 
-
 int main() {
     int arr[5];
-    int sum = 0;
-    
-    cout <<"Enter 5 numbers" <<"\n";
-    
-    for(int i = 0;i < 5; i++){
+
+    cout << "Enter 5 elements:\n";
+
+    for(int i = 0; i < 5; i++) {
         cin >> arr[i];
-        sum = sum + arr[i];
     }
-    
-    cout << " sum of array elements are..." << sum;
-    
-}    
+
+    cout << "Array elements are:\n";
+
+    for(int i = 0; i < 5; i++) {
+        cout << arr[i] << " ";
+    }
+
+    return 0;
+}
+
 
 // Problem  4 --
 // Linear Search
@@ -112,7 +115,31 @@ int main() {
     
     cout << " Element not found...";
     
-}    
+} 
+
+// Problem -- 5
+// Print address of each data of an array
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[5];
+
+    cout << "Enter 5 elements:\n";
+
+    for(int i = 0; i < 5; i++) {
+        cin >> arr[i];
+    }
+
+    cout << "Array elements are:\n";
+
+    for(int i = 0; i < 5; i++) {
+        cout << &arr[i] << " ";
+    }
+
+    return 0;
+}
     
     
         
