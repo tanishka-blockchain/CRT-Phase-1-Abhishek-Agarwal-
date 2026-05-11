@@ -1,0 +1,167 @@
+// Problem 1-- LeetCode 189
+// Rotate Array
+
+class Solution {
+public:
+
+    void reverse(vector<int>& nums , int start, int end) {
+        while(start < end) {
+        swap(nums[start], nums[end]);
+        start++;
+        end--;
+        }
+    }
+
+    void rotate(vector<int>& nums, int k) {
+        int n = nums.size();
+        k = k % n;
+        reverse(nums, 0, n-1); // rotate complete array
+        reverse(nums, 0, k-1); // rotate first k elements
+        reverse(nums, k, n-1); // rotate rest of the elements
+        
+    }
+};
+
+// Problem 2-- LeetCode 344
+// Reverse String
+
+class Solution {
+public:
+    void reverseString(vector<char>& s) {
+        int start =  0;
+        int end = s.size() - 1;
+
+        while (start < end) {
+            char c = s[start];
+            s[start] = s[end];
+            s[end] = c;
+            start++;
+            end--;
+        }    
+    }
+};
+
+// Problem 3-- LeetCode 796
+// Rotate String
+
+class Solution {
+public:
+    bool rotateString(string s, string goal) {
+
+        if(s.size() != goal.size()){
+            return false;
+        }
+        
+        string doubleString = s + s;
+        return doubleString.contains(goal);
+        
+    }
+};
+
+// Problem 4-- LeetCode 242
+// Valid Anagram
+
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+
+        if(s.size () != t.size()) {
+            return false;
+        }
+
+        sort(s.begin() , s.end());
+        sort(t.begin() , t.end());
+
+        if(s == t) {
+            return true;
+        } else {
+            return false;
+        }    
+    }
+};
+
+// Problem 5-- 
+// Palindrome String
+
+#include <iostream>
+using namespace std;
+
+bool isPalindrome(string str) {
+    int start = 0;
+    int end = str.size() - 1;
+    while(start < end) {
+        if(str[start] != str[end]){
+            return false;
+        }
+        start++;
+        end--;
+    }
+    return true;
+}
+
+int main() 
+{
+    
+    string str;
+    cout << "Enter a String...";
+    cin >> str;
+    
+    if(isPalindrome(str)) {
+        cout << "Given string is a Palindrome String...";
+    } else {
+        cout << "Given string is not a Palindrome String...";
+    }
+    
+    return 0;
+}
+
+// Program 6 --
+// Binary Search
+
+#include <iostream>
+using namespace std;
+
+int main()  {
+    int n;
+    cout << "Enter a size of array...";
+    cin >> n;
+    
+    int arr[n];
+    
+    cout << "Enter the sorted array...";
+    for(int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+    int target;
+    cout << "Enter the target element...";
+    cin >> target;
+    
+    // Binary search code
+    int low = 0;
+    int high = n - 1;
+    bool found = false;
+    
+    while(low <= high){
+        int mid = (low + high) / 2;
+        
+        if(arr[mid] == target) {
+            cout << "Element found at index " << mid;
+            found = true;
+            break;
+        } else if (arr[mid] < target){
+            low = mid + 1;
+    } else {
+            high = mid - 1;
+    }
+}
+
+if(found == false) {
+    cout << "Element not found...";
+}
+return 0;
+};
+    
+
+
+
+
