@@ -1,0 +1,54 @@
+// Problem 1 --
+// Binary Tree Preorder
+
+class Solution {
+    public:
+
+    void traversal(TreeNode * root,vector<int> & ans) {
+
+        // base condition
+        if(root == nullptr){
+            return;
+        } 
+        // logic
+        ans.push_back(root->val);
+        traversal(root->left, ans);
+        traversal(root->right, ans);    
+    }
+    vector<int> preorderTraversal(TreeNode* root){
+        vector<int> ans;
+        traversal(root, ans);
+        return ans;
+    }
+};
+
+
+// Problem 2 --
+// Binary Tree Inorder Traversal
+
+class Solution {
+    public:
+
+    void traversal(TreeNode * root,vector<int> & ans) {
+
+        // base condition
+        if(root == nullptr){
+            return;
+        } 
+        // logic
+        
+        traversal(root->left, ans);
+        ans.push_back(root->val);
+        traversal(root->right, ans);    
+    }
+    vector<int> inorderTraversal(TreeNode* root){
+        vector<int> ans;
+        traversal(root, ans);
+        return ans;
+    }
+};
+
+
+
+
+
